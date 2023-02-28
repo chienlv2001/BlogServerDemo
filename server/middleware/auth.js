@@ -13,7 +13,7 @@ export const verifyToken = async (req, res, next) => {
     }
 
     // const verified = jwt.verify(token, process.env.JWT_SECRET);
-    const verified=  jwt.verify({ id: user._id }, "ạdlkasjdkasfdjashdfj");
+    const verified=  jwt.verify(token, "chiendidao");
 
     req.user = verified;
     next();
